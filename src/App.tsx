@@ -35,6 +35,16 @@ import ServiceCard from './components/ServiceCard';
 import TestimonialCard from './components/TestimonialCard';
 import BookingForm from './components/BookingForm';
 
+// Images
+import heroImg from './assets/images/luxury_dental_clinic_hero.png';
+import whiteningImg from './assets/images/service_whitening.png';
+import invisalignImg from './assets/images/service_invisalign.png';
+import veneersImg from './assets/images/service_veneers.png';
+import aboutImg from './assets/images/section_about.png';
+import testimonialsImg from './assets/images/section_testimonials.png';
+import insuranceImg from './assets/images/section_insurance.png';
+import contactImg from './assets/images/section_contact.png';
+
 export default function App() {
   const [selectedService, setSelectedService] = useState('General Checkup');
   const [currentDayIndex, setCurrentDayIndex] = useState<number | null>(null);
@@ -84,7 +94,7 @@ export default function App() {
           {/* Background Image with Elegant Dark Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none bg-[#070A13]">
             <img 
-              src="/src/assets/images/luxury_dental_clinic_hero.png" 
+              src={heroImg} 
               alt="Luxury Dental Clinic" 
               className="w-full h-full object-cover opacity-60" 
               referrerPolicy="no-referrer"
@@ -211,7 +221,7 @@ export default function App() {
               {/* Service 1: Whitening */}
               <ScrollReveal delayMs={100}>
                 <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-md group cursor-pointer" onClick={() => handleBookWithService('Teeth Whitening')}>
-                  <img src="/src/assets/images/service_whitening.png" alt="Teeth Whitening" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={whiteningImg} alt="Teeth Whitening" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full p-8">
                     <h3 className="font-display font-medium text-[24px] text-white mb-2">Teeth Whitening</h3>
@@ -226,7 +236,7 @@ export default function App() {
               {/* Service 2: Invisalign */}
               <ScrollReveal delayMs={200}>
                 <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-md group cursor-pointer" onClick={() => handleBookWithService('Invisalign® Orthodontics')}>
-                  <img src="/src/assets/images/service_invisalign.png" alt="Invisalign" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={invisalignImg} alt="Invisalign" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full p-8">
                     <h3 className="font-display font-medium text-[24px] text-white mb-2">Invisalign®</h3>
@@ -241,7 +251,7 @@ export default function App() {
               {/* Service 3: Veneers */}
               <ScrollReveal delayMs={300}>
                 <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-md group cursor-pointer" onClick={() => handleBookWithService('Porcelain Veneers')}>
-                  <img src="/src/assets/images/service_veneers.png" alt="Porcelain Veneers" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={veneersImg} alt="Porcelain Veneers" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full p-8">
                     <h3 className="font-display font-medium text-[24px] text-white mb-2">Porcelain Veneers</h3>
@@ -336,7 +346,7 @@ export default function App() {
                 </ScrollReveal>
 
                 <ScrollReveal delayMs={50}>
-                  <img src="/src/assets/images/section_about.png" alt="Dr. Ilyayev" className="w-full h-[300px] object-cover rounded-xl shadow-md mb-6" />
+                  <img src={aboutImg} alt="Dr. Ilyayev" className="w-full h-[300px] object-cover rounded-xl shadow-md mb-6" />
                 </ScrollReveal>
 
                 <div className="space-y-5 font-sans font-normal text-[15px] sm:text-[16px] leading-[1.7] text-body-text">
@@ -437,7 +447,7 @@ export default function App() {
                 </ScrollReveal>
               </div>
               <ScrollReveal delayMs={100}>
-                <img src="/src/assets/images/section_testimonials.png" alt="Happy Patient" className="w-full h-[200px] object-cover rounded-xl shadow-md" />
+                <img src={testimonialsImg} alt="Happy Patient" className="w-full h-[200px] object-cover rounded-xl shadow-md" />
               </ScrollReveal>
             </div>
 
@@ -506,7 +516,7 @@ export default function App() {
                 </ScrollReveal>
               </div>
               <ScrollReveal delayMs={100}>
-                <img src="/src/assets/images/section_insurance.png" alt="Clinic Reception" className="w-full h-[250px] object-cover rounded-xl shadow-md" />
+                <img src={insuranceImg} alt="Clinic Reception" className="w-full h-[250px] object-cover rounded-xl shadow-md" />
               </ScrollReveal>
             </div>
 
@@ -753,7 +763,7 @@ export default function App() {
         {/* 8. CONTACT / BOOKING SECTION */}
         <section id="contact" className="py-24 bg-navy text-white scroll-mt-12 relative overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-            <img src="/src/assets/images/section_contact.png" alt="Clinic Interior" className="w-full h-full object-cover" />
+            <img src={contactImg} alt="Clinic Interior" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-navy/80 mix-blend-multiply"></div>
           </div>
           <div className="max-w-[1100px] mx-auto px-4 relative z-10 text-center">
