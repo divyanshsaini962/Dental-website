@@ -1,0 +1,6 @@
+{
+  "name": "Dr. I Dental PC",
+  "description": "Exceptional dental care in Elmhurst, Queens, NY. Led by Dr. Emmanuil Ilyayev, DDS, Queens' Most Trusted Dentist.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

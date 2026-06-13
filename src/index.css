@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  
+  --color-primary: #070A13; /* Elegant obsidian dark */
+  --color-section: #090D16; /* Faint alternate section dark */
+  --color-navy: #0E1524; /* Background navy (for dark sections) */
+  --color-gold: #C89B4E; /* Luxurious signature gold */
+  --color-gold-hover: #D4AF37; /* Lighter shimmering gold highlight */
+  --color-body-text: #CBD5E1; /* High contrast body light-slate text (WCAG compliant) */
+  --color-muted-text: #8A99AD; /* Readable light-grey muted slate text */
+  --color-border-divider: rgba(255, 255, 255, 0.08); /* Sophisticated dark border line */
+  --color-success-green: #4ADE80; /* Perfect high contrast emerald */
+  --color-dark-navy: #090E1A; /* Deep indigo-black for footer */
+  --color-darker-navy: #05080F; /* Midnight dark footer bottom */
+
+  --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Base styles */
+body {
+  color: var(--color-body-text);
+  font-family: var(--font-sans);
+  background-color: var(--color-primary);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom tooth background pattern styling - filled with faint elegant gold */
+.tooth-pattern {
+  background-color: var(--color-primary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 100 100'%3E%3Cpath d='M50 20 C42 20 37 23 37 32 C37 38 39 40 39 44 C39 52 42 62 46 66 C47.5 67.5 48.5 66 50 63 C51.5 66 52.5 67.5 54 66 C58 62 61 52 61 44 C61 40 63 38 63 32 C63 23 58 20 50 20 Z' fill='%23C89B4E' fill-opacity='0.012'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Hide scrollbar for testimonial slider on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Selection styles */
+::selection {
+  background-color: rgba(200, 155, 78, 0.25);
+  color: #FFFFFF;
+}
+
+/* Elegant Dark CSS Theme Overrides */
+
+/* Force headings and labels using text-navy to map to super high contrast off-white */
+.text-navy, .text-navy\/90, .text-navy\/80 {
+  color: #F8FAFC !important;
+}
+
+/* Cards that are bg-white now are styled as deep glass-like navy-slate cards */
+.bg-white {
+  background-color: #121B2A !important;
+}
+
+/* Soft gold accent banner for gold/5 background tags */
+.bg-gold\/5 {
+  background-color: rgba(200, 155, 78, 0.08) !important;
+}
+
+/* Redefine text white specifically inside active elements if needed */
+.text-white\/70 {
+  color: rgba(248, 250, 252, 0.7) !important;
+}
+.text-white\/95 {
+  color: rgba(248, 250, 252, 0.95) !important;
+}
+
+/* Custom form corrections for luxury dark look */
+input, select, textarea {
+  background-color: #0A0F1D !important;
+  color: #F8FAFC !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #C89B4E !important;
+  box-shadow: 0 0 0 2px rgba(200, 155, 78, 0.15) !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #64748B !important;
+}
+
+option {
+  background-color: #121B2A !important;
+  color: #F8FAFC !important;
+}
+
+/* Interactive elements hover improvements */
+.hover\:bg-navy\/5:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Outline buttons */
+.border-navy\/30 {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+.border-navy\/30:hover {
+  border-color: #C89B4E !important;
+  background-color: rgba(200, 155, 78, 0.05) !important;
+}
+
+/* Sub-credentials border override */
+.border-navy\/15 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+.border-navy\/15:hover {
+  border-color: rgba(200, 155, 78, 0.4) !important;
+}
+
+/* Faint badge highlight for Elmhurst, Queens marker */
+.bg-navy\/5 {
+  background-color: rgba(200, 155, 78, 0.1) !important;
+}
+
+/* Modern grayscale Map matching the obsidian background precisely */
+iframe[title="Dr. I Dental PC Map Location"] {
+  filter: grayscale(1) invert(0.9) contrast(1.15) brightness(0.9);
+  opacity: 0.85;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+iframe[title="Dr. I Dental PC Map Location"]:hover {
+  filter: grayscale(0.2) invert(0) contrast(1) brightness(1);
+  opacity: 1;
+}
+
+/* Responsive custom scroll reveal animations and luxury cards shadows */
+.shadow-xs {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+.shadow-2xs {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35) !important;
+}
+.shadow-\[0_2px_20px_rgba\(0\2c 0\2c 0\2c 0\.04\)\] {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+}
+.shadow-\[0_4px_30px_rgba\(0\2c 0\2c 0\2c 0\.08\)\] {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
+}
